@@ -385,7 +385,7 @@ namespace CNTK
 
         // Prepare additional structure that contains the number of nodes per
         // component.
-        std::map<std::vector<StrongComponent<TNode>>::const_iterator, size_t> componentToNodeCount;
+        std::map<decltype(strongComponents.begin()), size_t> componentToNodeCount;
         for (auto i = strongComponents.begin(); i != strongComponents.end(); ++i)
             componentToNodeCount.insert(std::make_pair(i, i->Nodes().size()));
 
