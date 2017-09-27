@@ -32,15 +32,12 @@
 
 #include "ComputationGraphAlgorithms.h"
 
-namespace CNTK
-{
-    inline std::wstring ToString(const Microsoft::MSR::CNTK::ComputationNodeBasePtr& node)
-    {
-        return node->NodeName();
-    }
-}
-
 namespace Microsoft { namespace MSR { namespace CNTK {
+
+inline std::wstring ToString(const ComputationNodeBasePtr& node)
+{
+    return node->NodeName();
+}
 
 // ===========================================================================
 // ComputationNetwork -- computation graph and operations
